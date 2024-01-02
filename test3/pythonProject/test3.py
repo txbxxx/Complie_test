@@ -76,12 +76,14 @@ def analysis(str, table, right_list, aList):
                 bList.append("移进")
             else:
                 bList.append("报错")
+                bList.append(" ")
                 aList.append(bList)
                 break
         elif char1 == char2 and char1 == "#":
             bList.append("接受")
         else:
             bList.append("报错")
+            bList.append(" ")
             aList.append(bList)
             break
         i += 1
@@ -122,8 +124,8 @@ def list_arrg(right_list):
 if __name__ == '__main__':
     right_list = []
     aList = []
-    str = "i+(i+i)"
-    # str = input("请输入字符串:")
+    # str = "i+(i+i)"
+    str = input("请输入字符串:")
     if not str.endswith("#"):
         str += '#'
     table = analysis_table()
